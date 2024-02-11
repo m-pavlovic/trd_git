@@ -5,13 +5,12 @@ public class GameModuleArmyCreation {
 
     public void setGameArmyFactory(MedievalGameFactory gameArmyFactory) {
         this.gameArmyFactory = gameArmyFactory;
-    }
-
-    public GameModuleArmyCreation(MedievalGameFactory gameArmyFactory) {
-        System.out.println("Game module army creation initialized - set game army factory...");
-        this.gameArmyFactory = gameArmyFactory;
         System.out.println("Game module army creation - game army factory set to: " + gameArmyFactory.getClass().getSimpleName());
         System.out.println("---------------------------------------------------------------------------------------------------------- \n");
+    }
+
+    public GameModuleArmyCreation() {
+        System.out.println("Game module army creation initialized - set game army factory...");
     }
 
     public void createArmy() {
