@@ -22,6 +22,6 @@ public class GameModuleArmyCreation {
         System.out.println("---------------------------------------------------------------------------------------------------------- \n");
         gameArmyFactory.populateListOfEntities();
         gameArmyFactory.listGameEntities();
-        System.out.println("---------------------------------------------------------------------------------------------------------- \n");
+        gameArmyFactory.particularListOfEntitiesInGame();
     }
 }

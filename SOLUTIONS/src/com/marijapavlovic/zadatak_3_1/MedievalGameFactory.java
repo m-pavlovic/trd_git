@@ -78,14 +78,35 @@ public abstract class MedievalGameFactory {
         }
     }
     public abstract void setArmyUnits();
-//    public void particularListOfEntitiesInGame() throws NoSuchMethodException {
-//        Class<?> clazz = this.getClass();
-//        System.out.println("Particular list of entities in game:");
-//        for (HashMap.Entry<String, List<Object>> entry : particularEntities.entrySet()) {
-//            System.out.println(entry.getKey() + ": " + entry.getValue().size() + " - ArrayList of -> " + entry.getValue().get(0).getClass().getSimpleName());
-//        }
-//        if (clazz.getDeclaredMethod("addRadnomNumberOfEntities", String.class, String.class) != null) {
-//            System.out.println("This kingdom has no " + clazz.getDeclaredMethod("addRadnomNumberOfEntities", String.class, String.class).getParameterTypes()[1].getSimpleName().toLowerCase() + " at this moment...");
-//        }
-//    }
+
+    public void particularListOfEntitiesInGame() {
+        System.out.println("Particular list of entities in game:");
+        for (HashMap.Entry<String, List<Object>> entry : particularEntities.entrySet()) {
+            String entityName = getEntityName(entry.getKey());
+            int entityCount = entry.getValue().size();
+            System.out.println(entityName + ": " + entityCount + " - ArrayList of -> " + entry.getKey());
+        }
+        System.out.println("---------------------------------------------------------------------------------------------------------- \n");
+    }
+
+    private String getEntityName(String entityType) {
+        switch (entityType) {
+            case "Archer":
+                return "Archers";
+            case "Swordsman":
+                return "Swordsmen";
+            case "Soldier":
+                return "Infantry";
+            case "Ship":
+                return "Fleet";
+            case "Cavalryman":
+                return "Cavalry";
+            case "SiegeWeapon":
+                return "Siege weapons";
+            default:
+                return entityType;
+        }
+    }
+
+
 }
