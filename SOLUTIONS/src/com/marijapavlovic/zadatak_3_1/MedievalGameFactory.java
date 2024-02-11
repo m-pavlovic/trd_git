@@ -77,6 +77,7 @@ public abstract class MedievalGameFactory {
             }
         }
     }
+    public abstract void setArmyUnits();
 //    public void particularListOfEntitiesInGame() throws NoSuchMethodException {
 //        Class<?> clazz = this.getClass();
 //        System.out.println("Particular list of entities in game:");

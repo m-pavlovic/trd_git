@@ -3,14 +3,14 @@ package com.marijapavlovic.zadatak_3_1;
 public class GameModuleArmyCreation {
     private MedievalGameFactory gameArmyFactory;
 
+    public GameModuleArmyCreation() {
+        System.out.println("Game module army creation initialized - set game army factory...");
+    }
+
     public void setGameArmyFactory(MedievalGameFactory gameArmyFactory) {
         this.gameArmyFactory = gameArmyFactory;
         System.out.println("Game module army creation - game army factory set to: " + gameArmyFactory.getClass().getSimpleName());
         System.out.println("---------------------------------------------------------------------------------------------------------- \n");
-    }
-
-    public GameModuleArmyCreation() {
-        System.out.println("Game module army creation initialized - set game army factory...");
     }
 
     public void createArmy() {
